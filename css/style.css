@@ -147,7 +147,7 @@
     filter: grayscale(0.6);
     filter: sepia(0.8);
     border-radius: 15px;
-    width: 600px;
+    transform: scale(0.7);
 }
 
 .ex-10-icon {
@@ -157,7 +157,7 @@
 
 @keyframes spin {
     0% {
-        transform: rotate(1turn);
+        transform: rotate(360deg);
     }
 }
 
@@ -183,7 +183,31 @@
     }
 }
 
-.ex-12-button,
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: example 2s linear;
+
+    @keyframes example {
+        0% {
+            right: 20%;
+        }
+
+        50% {
+            right: calc (100% - 60px);
+        }
+
+        100% {
+            right: 20%;
+        }
+
+    }
+
+
+
+
+}
+
+
+
 .ex-13-button {
     position: relative;
     display: block;
@@ -198,7 +222,47 @@
     text-decoration: none;
 }
 
-.ex-12-top-white,
+.ex-12-top-white {
+    animation: example 5s linear infinite;
+
+    @keyframes example {
+        0% {
+            background-color: red;
+            left: 10%;
+            top: 0px;
+        }
+
+
+
+        50% {
+            background-color: blue;
+            left: 20%;
+            top: 0px;
+        }
+
+
+        100% {
+            background-color: red;
+            left: 0px;
+            top: 0px;
+        }
+
+
+
+    }
+}
+
+.ex-12-top-white:hover {
+    animation: example 5s linear;
+    ;
+
+
+}
+
+
+
+
+
 .ex-13-top-white {
     position: absolute;
     top: -10px;
